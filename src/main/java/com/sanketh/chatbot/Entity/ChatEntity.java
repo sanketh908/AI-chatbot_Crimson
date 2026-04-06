@@ -12,8 +12,10 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 public class ChatEntity {
     @Id
     @GeneratedValue(strategy = IDENTITY)
+    @Column(unique = true, nullable = false)
     private Long chatId;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @Column(nullable = false)
+    @OneToMany(mappedBy = "chat",cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<PromptEntity> prompts;
     @ManyToOne
     @JoinColumn(name = "userId")
