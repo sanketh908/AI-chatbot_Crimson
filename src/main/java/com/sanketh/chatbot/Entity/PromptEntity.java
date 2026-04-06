@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class PromptEntity {
+public class PromptEntity  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long promptId;
