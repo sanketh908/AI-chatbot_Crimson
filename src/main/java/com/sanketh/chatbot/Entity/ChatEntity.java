@@ -2,13 +2,18 @@ package com.sanketh.chatbot.Entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Entity
-@Data
+@Setter
+@Getter
+@NoArgsConstructor
 public class ChatEntity {
     @Id
     @GeneratedValue(strategy = IDENTITY)
