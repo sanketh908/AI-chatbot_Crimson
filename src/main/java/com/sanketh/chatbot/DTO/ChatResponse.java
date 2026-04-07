@@ -8,5 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ChatResponse {
+    private Long chatId;
+    private long promptId;
     private String responseText;
 }
