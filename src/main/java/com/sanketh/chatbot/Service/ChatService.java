@@ -5,7 +5,8 @@ import com.sanketh.chatbot.DTO.ChatResponse;
 import com.sanketh.chatbot.Entity.ChatEntity;
 import com.sanketh.chatbot.Entity.UserEntity;
 import jakarta.transaction.Transactional;
-import org.apache.catalina.User;
+import java.util.List;
+
 
 public interface ChatService {
 
@@ -14,4 +15,8 @@ public interface ChatService {
     ChatResponse getChatRequest(UserEntity user, ChatRequest chatRequest,String newPrompt);
 
     ChatEntity getChat(Long id);
+
+    List<ChatEntity> getAllChats();
+
+    void deleteChatById(Integer id);
 }

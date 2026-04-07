@@ -26,8 +26,15 @@ public ResponseEntity<?> getChatResponse(@RequestBody ChatRequest chatRequest) {
     public ResponseEntity<?> getChatResponse(@PathVariable Long id) {
         return ResponseEntity.ok(chatService.getChat(id));
     }
-    @GetMapping("/user/get")
-
+    @GetMapping("/user/getAllChats")
+            public ResponseEntity<?> getAllChats()
+    {
+        return ResponseEntity.ok(chatService.getAllChats());
+    }
+    @DeleteMapping("/user/deleteChatById/{id}")
+    public ResponseEntity<?> deleteChatById(@PathVariable Integer id) {
+        return ResponseEntity.ok(chatService.deleteChatById(id));
+    }
 
 
 }

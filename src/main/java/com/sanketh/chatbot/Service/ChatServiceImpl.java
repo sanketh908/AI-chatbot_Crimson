@@ -12,6 +12,7 @@ import jakarta.transaction.Transactional;
 import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -81,5 +82,10 @@ private final ChatModel chatModel;
     public ChatEntity getChat(Long id) {
       return   chatRepository.findById(id).orElseThrow(() -> new RuntimeException("Chat not found with id: " + id));
 
+    }
+
+    @Override
+    public List<ChatEntity> getAllChats() {
+       return chatRepository.findAll();
     }
 }
