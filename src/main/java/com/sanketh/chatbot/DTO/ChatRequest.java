@@ -11,4 +11,6 @@ public class ChatRequest {
     private Long chatId;
     private String Prompt;
      private String base64img;
+
+
 }
