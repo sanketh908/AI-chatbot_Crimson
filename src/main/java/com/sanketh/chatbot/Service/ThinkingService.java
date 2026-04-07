@@ -22,11 +22,7 @@ public class ThinkingService {
         this.promptRepository = promptRepository;
     }
     public ChatResponse  getChatResponse(ChatRequest chatRequest){
-        if(chatRequest.getChatId()==null){
-            ChatEntity  chatEntity = new ChatEntity();
 
-        }
-       Optional <ChatEntity>  chatEntity=chatRepository.findById(chatRequest.getChatId());
 
 
     }

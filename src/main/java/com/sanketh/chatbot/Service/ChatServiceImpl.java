@@ -76,4 +76,10 @@ private final ChatModel chatModel;
 
 
     }
+
+    @Override
+    public ChatEntity getChat(Long id) {
+      return   chatRepository.findById(id).orElseThrow(() -> new RuntimeException("Chat not found with id: " + id));
+
+    }
 }

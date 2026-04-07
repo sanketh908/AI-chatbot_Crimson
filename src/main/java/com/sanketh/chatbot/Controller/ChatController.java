@@ -22,6 +22,12 @@ public ResponseEntity<?> getChatResponse(@RequestBody ChatRequest chatRequest) {
     return ResponseEntity.ok(chatService.getChatResponse(chatRequest));
 
     }
+    @GetMapping("/user/getChatbychatId/{id}")
+    public ResponseEntity<?> getChatResponse(@PathVariable Long id) {
+        return ResponseEntity.ok(chatService.getChat(id));
+    }
+    @GetMapping("/user/get")
+
 
 
 }
