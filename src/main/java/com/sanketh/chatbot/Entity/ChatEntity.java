@@ -14,7 +14,7 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @Setter
 @Getter
 @NoArgsConstructor
-public class ChatEntity {
+public class ChatEntity  {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     @Column(unique = true, nullable = false)
